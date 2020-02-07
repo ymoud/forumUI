@@ -1,0 +1,10 @@
+<div *ngFor="let user of users">
+    <span>{{user.name}}</span>
+    <span>{{user.surname}}</span>
+</div>
+<div class="button-row">
+    <button  mat-fab (click)="openNewForm()">
+        <mat-icon aria-label="add a new user">add_circle_outline</mat-icon>
+    </button>
+</div>
+<new-user-form *ngIf="addUser" [userService]="userService"></new-user-form>

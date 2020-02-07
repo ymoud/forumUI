@@ -1,0 +1,23 @@
+<form class="example-form" [formGroup]="formFields">
+    <mat-form-field class="example-full-width">
+        <input matInput [placeholder]="'Όνομα'" formControlName="name"/>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [placeholder]="'Επώνυμο'"/>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [placeholder]="'Ηλικία'" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [placeholder]="'Εθνικότητα'" />
+    </mat-form-field>
+    <mat-form-field  class="example-full-width">
+        <mat-label>{{'Φύλλο'}}</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let item of genders">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <button mat-flat-button color="accent" (click)="addNew()"> {{'Submit'}}</button>
+</form>
